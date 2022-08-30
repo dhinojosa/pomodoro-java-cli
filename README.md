@@ -1,9 +1,6 @@
-# basic-java-template
-Basic Java Template with Slf4j, Log4j, Junit Jupiter, Jacoco, AssertJ, JQwik
+# Pomodoro Java CLI Capstone Application
 
-
-## Steps to use
-
-1. Select use template
-2. Create your repository
-3. Clone your repository
+Run
+```java
+mvn clean verify
+```
