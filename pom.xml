@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.evolutionnext</groupId>
-    <artifactId>basic-app</artifactId>
+    <artifactId>pomodoro-java-cli</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>basic-app</name>
+    <name>${project.artifactId}</name>
     <url>https://github.com/dhinojosa/pomodoro-java-cli</url>
 
     <properties>
@@ -142,6 +142,24 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.4.2</version>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                <descriptorRefs>
+                    <descriptorRef>src</descriptorRef>
+                </descriptorRefs>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
