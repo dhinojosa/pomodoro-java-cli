@@ -31,18 +31,16 @@ public class WalletTest {
     }
 
     @Test
-    @DisplayName("""
-       The wallet should be empty when
-       adding the funds and removing the same amount""")
+    @DisplayName("The wallet should be empty when\n" +
+                 "adding the funds and removing the same amount")
     void testAddFundsWallet() {
         wallet.addFunds(1);
         assertThat(wallet.isEmpty()).isFalse();
     }
 
     @Test
-    @DisplayName("""
-       Adding 10 funds to wallet and removing 3 should
-       be non-empty""")
+    @DisplayName("Adding 10 funds to wallet and removing 3 should\n" +
+                 "be non-empty")
     void testSpendFundsWallet() {
         wallet.addFunds(10);
         wallet.spendFunds(3);
@@ -50,9 +48,8 @@ public class WalletTest {
     }
 
     @Test
-    @DisplayName("""
-       Adding 10 funds to wallet and removing 10 should
-       be empty""")
+    @DisplayName("Adding 10 funds to wallet and removing 10 should\n" +
+                 "be empty")
     void testAddAndSpendTheSameAmountOfFunds() {
         wallet.addFunds(10);
         wallet.spendFunds(10);
@@ -60,8 +57,7 @@ public class WalletTest {
     }
 
     @Test
-    @DisplayName("""
-       All Wallets should have a UUID""")
+    @DisplayName("All Wallets should have a UUID")
     void testAllWalletInstancesShouldHaveAUUID() {
         UUID uuidOne = wallet.getUUID();
         UUID uuidTwo = new Wallet().getUUID();
